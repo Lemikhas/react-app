@@ -36,7 +36,8 @@ export class Modal extends Component {
                 textAlign:'center',
                 padding:'1rem'
               }}
-            >
+              
+            >            
               <span className='important'>
                 {this.props.modal.modalMsg}
               </span>
@@ -50,7 +51,7 @@ export class Modal extends Component {
             <p
               style={{textAlign:'center'}}
             >
-              Are you sure you want to delete
+              Are you sure you want to remove
               {this.props.modal.delId!=null?" user: ":" "}
               <span className='important'>
                 {this.props.modal.modalMsg}

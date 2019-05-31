@@ -105,7 +105,7 @@ export class Form extends Component {
         />
         <PopupBubble errorMsg={this.state.formErrors.email}/>
         <br />
-        <label>Ip adress</label><br/>
+        <label>Ip address</label><br/>
         <input
           type="ip"
           name="ip"

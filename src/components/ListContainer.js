@@ -23,7 +23,7 @@ export class ListContainer extends Component {
           <span
           className='ip'
           onClick={this.props.sortList}
-          >Ip adress</span>
+          >Ip address</span>
           <span
             onClick={this.props.deleteList}
             style={this.getStyle()}

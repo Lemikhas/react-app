@@ -17,19 +17,19 @@ export default class App extends Component {
       {
         id:Math.random().toString(36).substr(2, 16),
         name:"cat",
-        email:"cat@mail.pl",
+        email:"cat@mail.com",
         ip:"123.12.32.3"
       },
       {
         id:Math.random().toString(36).substr(2, 16),
-        name:"dog",
-        email:"dog@mail.pl",
+        name:"rat",
+        email:"rat@mail.com",
         ip:"11.1.2.3"
       },
       {
         id:Math.random().toString(36).substr(2, 16),
         name:"bat",
-        email:"bat@mail.pl",
+        email:"bat@mail.com",
         ip:"10.11.12.13"
       }
     ]
@@ -47,7 +47,7 @@ export default class App extends Component {
   deleteList = ()=> {
     this.setState({modal:{
       showModal:true,
-      modalMsg:'whole list',
+      modalMsg:'the whole list',
       delId:null
     }});
     
@@ -141,7 +141,6 @@ export default class App extends Component {
       default:
         break;
     }
-    //this.setState({users:[...this.state.users.filter(user=> user.id!==id)]});
   }
 
   render() {
