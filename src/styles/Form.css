@@ -1,0 +1,46 @@
+label{
+  color: #888;
+  font-size: 12px;
+}
+
+input{
+  outline: none;
+  font-size: 18px;
+  border: none;
+  width: 30%;
+  border-bottom: 2px solid  rgb(86, 87, 143);
+  padding: 0.6rem 0.6rem 0rem 0.6rem;
+  transition: width 0.2s ease-in-out;
+  cursor: context-menu;
+}
+input:focus{
+  width: 40%;
+}
+
+button{
+  outline: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius:50px;  
+  cursor: pointer;
+}
+.btn-pos{
+  background: rgb(35, 240, 155);
+}
+.btn-pos:active{
+  background: rgb(16, 116, 74);
+}
+.btn-neg{
+  background: rgb(240, 35, 35);
+}
+.btn-neg:active{
+  background: rgb(116, 16, 16);
+}
+button:disabled{
+  cursor: not-allowed;
+  background: rgb(59, 92, 78);
+}

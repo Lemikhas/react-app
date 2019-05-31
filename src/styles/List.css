@@ -1,0 +1,30 @@
+.list-header, .list-item{
+  background: #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0.2rem;
+}
+.list-header{
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+
+}
+.list-item{
+  background: #fff;
+  border-bottom: 1px solid #ccc; 
+}
+.list-item:nth-child(odd){
+  background: #eee;
+  border-bottom: 1px solid #ccc; 
+}
+.list-header span, .list-item span{ 
+  flex: 10;
+
+}
+.list-header span:last-child, .list-item span:last-child{
+  flex: 2; 
+  text-align: right;
+  padding-right: 1rem;
+  cursor: pointer;
+}
