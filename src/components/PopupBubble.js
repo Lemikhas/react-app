@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import '../styles/PopupBubble.css'
 
 export class PopupBubble extends Component {
-  getStyle = () =>{
-    return{
-      visibility: (this.props.errorMsg.length > 1)?('visible'):('hidden')
+  getStyle = () => {
+    return {
+      visibility: (this.props.errorMsg.length > 1) ? ('visible') : ('hidden')
     }
   }
 
@@ -12,7 +12,7 @@ export class PopupBubble extends Component {
     return (
       <div className='popup'>
         <span className='popuptext' style={this.getStyle()}>
-         {this.props.errorMsg}
+          {this.props.errorMsg}
         </span>
       </div>
     )

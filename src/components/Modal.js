@@ -2,22 +2,12 @@ import React, { Component } from 'react'
 import '../styles/Modal.css'
 
 export class Modal extends Component {
-  
-    
-  
-  state = {
-    show:false,
-    msg:'',
-    confirm:false
-  }
   render() {
     return (
-      
       <div 
         className='modal'
         style={{display: (this.props.modal.showModal)?('block'):('none')}}
       >
-
         <div className="modal-content">
           <div className="modal-header">
             <span 
@@ -26,7 +16,6 @@ export class Modal extends Component {
             >&times;</span>
             <h1>{this.props.modal.confirm!==null?"Confirm!":"Cannot add user!"}</h1>
           </div>
-
           <div 
             className="modal-body"
             style={{display: (this.props.modal.confirm===null)?('block'):('none') }}
@@ -36,21 +25,17 @@ export class Modal extends Component {
                 textAlign:'center',
                 padding:'1rem'
               }}
-              
             >            
               <span className='important'>
                 {this.props.modal.modalMsg}
               </span>
             </p>
           </div>
-
           <div 
             className="modal-body"
             style={{display: (this.props.modal.confirm!==null)?('block'):('none')}}
-            >
-            <p
-              style={{textAlign:'center'}}
-            >
+          >
+            <p style={{textAlign:'center'}}>
               Are you sure you want to remove
               {this.props.modal.delId!=null?" user: ":" "}
               <span className='important'>
@@ -58,9 +43,7 @@ export class Modal extends Component {
               </span>
               ?
             </p>
-            <div
-              style={{display:'flex'}}
-            >
+            <div style={{display:'flex'}}>
               <button
                 className='btn-pos'
                 style={{flex:'2'}}
@@ -74,7 +57,6 @@ export class Modal extends Component {
             </div>
           </div>
         </div>
-
       </div>
     )
   }

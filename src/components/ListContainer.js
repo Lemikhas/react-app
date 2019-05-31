@@ -3,30 +3,25 @@ import List from './List'
 import '../styles/List.css'
 
 export class ListContainer extends Component {
-  getStyle = () => {
-    return{
-    visibility: (this.props.users.length > 0)?('visible'):('hidden')
-    }
-  }
   render() {
     return (
       <div>
         <div className="list-header">
           <span
-          className='name'
+            className='name'
             onClick={this.props.sortList}
           >Name</span>
           <span
-          className='emali'
-          onClick={this.props.sortList}
+            className='emali'
+            onClick={this.props.sortList}
           >Email</span>
           <span
-          className='ip'
-          onClick={this.props.sortList}
+            className='ip'
+            onClick={this.props.sortList}
           >Ip address</span>
           <span
             onClick={this.props.deleteList}
-            style={this.getStyle()}
+            style={{visibility: (this.props.users.length > 0)?('visible'):('hidden')}}
           >&times;</span>
         </div>
         <List 

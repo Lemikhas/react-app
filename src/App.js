@@ -6,6 +6,7 @@ import Modal from './components/Modal'
 import './App.css';
 
 export default class App extends Component {
+
   state = {
     modal:{
       showModal:false,
@@ -41,7 +42,6 @@ export default class App extends Component {
       modalMsg:this.state.users.find(user=> user.id===id).name,
       delId:id
     }});
-    
   }
 
   deleteList = ()=> {
@@ -50,7 +50,6 @@ export default class App extends Component {
       modalMsg:'the whole list',
       delId:null
     }});
-    
   }
 
   closeModal = (confirm, id)=>{
@@ -66,7 +65,6 @@ export default class App extends Component {
       confirm:false,
       delId:null
     }});
-
   }
 
   addUser = (name, email, ip)=>{
@@ -78,32 +76,23 @@ export default class App extends Component {
         delId:null
       }});
     }else{
-    const newUser = {
-      id: Math.random().toString(36).substr(2, 16),
-        name,
-        email,
-        ip
-    }
-    this.setState({users:[...this.state.users, newUser]});
+      const newUser = {
+          id: Math.random().toString(36).substr(2, 16),
+          name,
+          email,
+          ip
+        }
+      this.setState({users:[...this.state.users, newUser]});
     }
   }
 
-
   sortList = (e)=>{
-
     switch (e.target.className) {
       case 'name':
         this.setState({users:[...this.state.users.sort((a, b)=>{
           const A = a.name.toUpperCase();
           const B = b.name.toUpperCase();
-  
-            let comparison = 0;
-            if (A > B) {
-              comparison = 1;
-            } else if (A < B) {
-              comparison = -1;
-            }
-            return comparison;
+          return  (A > B)?(1):((A < B)?(-1):(0));
           }
         )]});
         break;
@@ -111,14 +100,7 @@ export default class App extends Component {
         this.setState({users:[...this.state.users.sort((a, b)=>{
           const A = a.email.toUpperCase();
           const B = b.email.toUpperCase();
-
-            let comparison = 0;
-            if (A > B) {
-              comparison = 1;
-            } else if (A < B) {
-              comparison = -1;
-            }
-            return comparison;
+          return  (A > B)?(1):((A < B)?(-1):(0));
           }
         )]});
         break;
@@ -126,18 +108,10 @@ export default class App extends Component {
         this.setState({users:[...this.state.users.sort((a, b)=>{
           const A = a.ip.toUpperCase();
           const B = b.ip.toUpperCase();
-
-            let comparison = 0;
-            if (A > B) {
-              comparison = 1;
-            } else if (A < B) {
-              comparison = -1;
-            }
-            return comparison;
+          return  (A > B)?(1):((A < B)?(-1):(0));
           }
         )]});
         break;
-    
       default:
         break;
     }
